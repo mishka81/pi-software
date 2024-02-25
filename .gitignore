@@ -1,0 +1,3 @@
+docker/*/volumes
+.env
+# home/pi/.local/bin

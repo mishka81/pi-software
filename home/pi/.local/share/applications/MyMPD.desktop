@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=MyMPD
+Comment=My Music Player Daemon
+Exec=mympd-gui
+Icon=/home/pi/.icons/mympd.png
+Terminal=false
+Type=Application
+Categories=Audio;MusicPlayer;
+StartupNotify=false

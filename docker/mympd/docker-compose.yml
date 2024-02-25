@@ -1,0 +1,16 @@
+services:
+  mympd:
+    image: ghcr.io/jcorporation/mympd/mympd
+    container_name: mympd
+    user: 1000:1000
+    ports:
+      - 7700:8080
+    environment:
+      - UMASK_SET=022
+      - MYMPD_SSL=false
+      - MYMPD_HTTP_PORT=8080
+    volumes:
+      - ~/.mpd/socket:/run/mpd/socket
+      - ./volumes/mympd/work:/var/lib/mympd
+      - ./volumes/mympd/cache:/var/cache/mympd
+      - /media/pi/NAS/music/library:/music

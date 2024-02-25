@@ -1,0 +1,30 @@
+#https://beets.readthedocs.io/en/stable/reference/config.html
+directory: /media/pi/NAS/music/library
+library: /media/pi/NAS/music/beets-library.db
+clutter: [ "Thumbs.DB", ".DS_Store", ".jpg", ".png", ".txt", ".nfo", ".lyrics", ".directory", ".m3u"]
+ui:
+  color: yes
+import:
+  move: yes
+plugins: fetchart lastgenre replaygain badfiles convert discogs lyrics spotify duplicates missing fish ihate mpdupdate fromfilename mbsync
+replaygain:
+  backend: ffmpeg
+convert:
+  dest: /media/pi/NAS/music/exports
+badfiles:
+  check_on_import: yes
+  commands:
+    ogg: oggz validate
+discogs:
+  user_token: ${DISCOGS_USER_TOKEN}
+  source_weight: 0.7
+spotify:
+  source_weight: 0.9
+mpd:
+    host: localhost
+    port: 6604
+ihate:
+    error:
+      - format:MP3 bitrate:..160000
+fetchart:
+  minwidth: 360

@@ -1,0 +1,10 @@
+
+# Disable onboard audio
+dtparam=audio=off
+
+# Disable 2nd HDMI output
+max_framebuffers=1
+
+# Enable hifiberry sound card
+# https://www.hifiberry.com/docs/software/configuring-linux-3-18-x/
+dtoverlay=hifiberry-dacplus

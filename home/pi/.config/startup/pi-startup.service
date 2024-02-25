@@ -1,0 +1,10 @@
+[Unit]
+Description=Tasks ran at startup
+After=network.target
+Wants=udisks2.service
+
+[Service]
+ExecStart=/home/pi/.local/bin/pi-startup
+
+[Install]
+WantedBy=default.target
