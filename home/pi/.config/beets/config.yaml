@@ -6,7 +6,8 @@ ui:
   color: yes
 import:
   move: yes
-plugins: fetchart lastgenre replaygain badfiles convert discogs lyrics spotify duplicates missing fish ihate mpdupdate fromfilename mbsync
+
+plugins: fetchart lastgenre replaygain badfiles convert discogs lyrics spotify duplicates missing fish ihate fromfilename mbsync bandcamp #mpdupdate
 replaygain:
   backend: ffmpeg
 convert:
@@ -16,15 +17,17 @@ badfiles:
   commands:
     ogg: oggz validate
 discogs:
-  user_token: ${DISCOGS_USER_TOKEN}
+  user_token: WaNvKyEbEtsRGLqQGrSMWjtrONOondGSsTBEPMRO
   source_weight: 0.7
 spotify:
   source_weight: 0.9
-mpd:
-    host: localhost
-    port: 6604
+#mpd:
+#    host: localhost
+#    port: 6604
 ihate:
-    error:
-      - format:MP3 bitrate:..160000
+    warn:
+      - format:mp3 bitrate:..192000
 fetchart:
   minwidth: 360
+lyrics:
+  auto: yes

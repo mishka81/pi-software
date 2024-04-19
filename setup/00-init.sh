@@ -27,3 +27,6 @@ echo "bashrc updated"
 
 # Installing tools
 sudo apt install -y gnome-disk-utility baobab
+
+# Setup isolated environment for python
+python3 -m venv ~/.local/share/python

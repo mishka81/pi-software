@@ -2,7 +2,7 @@
 
 echo "Installing mpd"
 
-sudo apt install -y mpd
+sudo apt install -y mpd lame
 sudo systemctl stop mpd
 sudo systemctl disable mpd
 
